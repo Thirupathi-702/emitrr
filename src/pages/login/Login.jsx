@@ -41,7 +41,7 @@ const Login = () => {
       const { email, password } = userData;
       setLoading(true);
       if (handleValidation()) {
-        const host = `http://localhost:3000/api/auth/login`;
+        const host = `https://emitrr-b.onrender.com/api/auth/login`;
 
         const response = await axios.post(host, {
           email,

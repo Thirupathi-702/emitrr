@@ -61,7 +61,7 @@ const Register = () => {
       setLoading(true);
       const { email, password, name } = userData;
       if (handleValidation()) {
-        const host = `http://localhost:3000/api/auth/register`;
+        const host = `https://emitrr-b.onrender.com/api/auth/register`;
         const response = await axios.post(host, {
           username: name,
           password,
