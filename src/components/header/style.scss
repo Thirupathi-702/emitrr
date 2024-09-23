@@ -1,0 +1,84 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f2937; // Dark background
+  color: #fff;
+  position: relative;
+  z-index: 10;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fbbf24; // Bright accent color for branding
+
+    svg {
+      margin-left: 10px;
+      font-size: 1.8rem;
+    }
+    cursor: pointer;
+  }
+
+  .menuButton {
+    display: none;
+    cursor: pointer;
+    svg {
+      font-size: 2rem;
+      color: #fbbf24;
+    }
+  }
+
+  .menu, .navbarMenu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+
+    li {
+      font-size: 1.5rem;
+      color: #fbbf24;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #60a5fa; // Change color on hover
+      }
+
+      svg {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  // Mobile View
+  @media (max-width: 768px) {
+    .menuButton {
+      display: block;
+    }
+    
+    .menu {
+      display: none;
+    }
+
+    .navbarMenu {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #1f2937;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      
+      li {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #fbbf24;
+      }
+    }
+  }
+}

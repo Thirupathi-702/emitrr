@@ -1,0 +1,104 @@
+@import "../../mixins.scss";
+
+.home {
+  min-width: 300px;
+  background-color: var(--bg1);
+  color: var(--text1);
+  min-height: calc(100dvh - 70px);
+  padding-bottom: 20px;
+  @include md {
+    background-image: url("../../assets//image.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .packer {
+    background-color: rgba(255, 255, 255, 0.1); // Semi-transparent background for sleek look
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    width: 85%;
+    margin: 0px auto;
+    max-width: 900px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Adding shadow effect for depth
+
+    .title {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-size: 22px;
+        color: var(--text2);
+        @include md {
+          font-size: 32px;
+        }
+        span {
+          color: var(--primary); // Change to primary brand color
+        }
+      }
+      p {
+        margin-left: 8px;
+        margin-top: 4px;
+        svg {
+          font-size: 32px;
+          color: var(--accent); // Accent color (e.g., gold or orange)
+        }
+      }
+    }
+
+    .intro, .object, .gameRules {
+      h3 {
+        color: var(--primary);
+        font-size: 18px;
+        @include md {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .gameRules {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 24px;
+        list-style: decimal;
+        li {
+          color: var(--text1);
+        }
+      }
+    }
+
+    .playButton {
+      align-self: center;
+      height: 90px;
+      width: 90px;
+      color: white;
+      background: linear-gradient(135deg, #1e90ff, #00bfff); // Gradient for button
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); // Hover effect
+      }
+
+      p {
+        font-size: 22px;
+        color: white;
+        font-weight: bold;
+      }
+
+      svg {
+        font-size: 24px;
+        color: var(--accent);
+      }
+    }
+  }
+}
